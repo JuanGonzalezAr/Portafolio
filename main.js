@@ -147,7 +147,7 @@
 
   /* ---------- HUD: cambia a blanco cuando está sobre fondos de color ---------- */
   function hudWatch() {
-    $$('.col, .tickets, .foot').forEach(e => (e.dataset.bg = 'dark'));
+    $$('.col, .tickets').forEach(e => (e.dataset.bg = 'dark'));
     const l = $('.hud--l'), r = $('.hud--r');
     if (!l || !r) return;
     let queued = false;

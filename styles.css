@@ -274,13 +274,13 @@ a.pill:hover{background:var(--red);color:#fff}
 .rail__hint{position:absolute;left:50%;top:calc(50% + clamp(100px,10vw,140px));transform:translateX(-50%);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
 
 /* ---------- Pie ---------- */
-.foot{background:var(--red);color:#fff;padding:var(--pad) var(--pad) calc(var(--pad)*3.2);overflow:hidden}
+.foot{background:var(--paper);color:var(--red);padding:var(--pad) var(--pad) calc(var(--pad)*3.2);overflow:hidden}
 .foot__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto auto;gap:var(--pad) clamp(28px,6vw,110px);align-items:start;margin-bottom:clamp(60px,14vh,160px);font-size:clamp(14px,1.1vw,17px)}
 .foot__mail{font-family:var(--serif);font-style:italic;font-size:1.25em;line-height:1}
 .foot__time{font-size:12px;line-height:1.6;text-transform:uppercase;letter-spacing:.03em}
 .foot__links{display:grid;gap:3px}
 .foot__links a:hover{text-decoration:underline;text-underline-offset:3px}
-.wm--foot{color:#fff}
+.wm--foot{color:var(--red)}
 
 .foot__legal{margin-top:clamp(18px,3vh,32px);font-size:11px;letter-spacing:.05em;text-transform:uppercase;opacity:.85}
 
