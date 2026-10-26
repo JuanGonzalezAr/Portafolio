@@ -301,16 +301,51 @@
 
     mm.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
 
-      /* Proceso: las columnas suben con el scroll */
+      /* Proceso: las columnas suben y un polígono rueda hasta volverse círculo */
       {
-        const sec = $('.process'), grid = $('.process__grid'), cols = $$('.col', grid);
-        const fr = [0.62, 0.52, 0.44, 0.38];
+        const sec = $('.process'), grid = $('.process__grid'), cols = $$('.col', grid), svg = $('.process__svg');
+        const dash = $('#p-dash'), road = $('#p-road'), roll = $('#p-roll'), dot = $('#p-dot');
+        const fr = [0.64, 0.44, 0.33, 0.27];
         const H = () => grid.clientHeight;
+        const state = { p: 0 };
+        const draw = () => {
+          const W = grid.clientWidth, h = H();
+          const p = state.p;
+          svg.setAttribute('viewBox', `0 0 ${W} ${h}`);
+          const dy = h * 0.35, ry = h * 0.515, r = ry - dy;
+          dash.setAttribute('x1', 0); dash.setAttribute('x2', W);
+          dash.setAttribute('y1', dy); dash.setAttribute('y2', dy);
+          const amp = r * 0.38 * Math.pow(1 - p, 1.4);
+          const lam = 140 * (1 - 0.55 * p);
+          let d = '';
+          for (let x = 0; x <= W; x += 4) {
+            const y = ry - amp * Math.abs(Math.sin(Math.PI * x / lam));
+            d += (x ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1);
+          }
+          road.setAttribute('d', d);
+          const c1 = cols[0].offsetLeft + cols[0].offsetWidth * 0.5;
+          const c4 = cols[3].offsetLeft + cols[3].offsetWidth * 0.42;
+          const cx = c1 + (c4 - c1) * p;
+          const n = Math.round(5 + 43 * Math.pow(p, 0.85));
+          const rot = (cx / r) * 0.9;
+          let maxS = -1;
+          for (let i = 0; i < n; i++) maxS = Math.max(maxS, Math.sin(rot + (i / n) * Math.PI * 2));
+          const cy = ry - r * maxS;
+          const pts = [];
+          for (let i = 0; i < n; i++) {
+            const a = rot + (i / n) * Math.PI * 2;
+            pts.push((cx + Math.cos(a) * r).toFixed(1) + ',' + (cy + Math.sin(a) * r).toFixed(1));
+          }
+          roll.setAttribute('points', pts.join(' '));
+          dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1));
+        };
         const tl = gsap.timeline({
           defaults: { ease: 'none' },
-          scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + innerHeight * 1.6, pin: true, scrub: 0.6, invalidateOnRefresh: true },
+          scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + innerHeight * 2.2, pin: true, scrub: 0.6, invalidateOnRefresh: true, onRefresh: draw },
         });
-        cols.forEach((c, i) => tl.fromTo(c, { height: () => Math.max(H() * fr[i], 270) }, { height: () => H(), ease: 'power2.inOut', duration: 0.7 }, i * 0.05));
+        cols.forEach((c, i) => tl.fromTo(c, { height: () => H() * fr[i] }, { height: () => H(), ease: 'power2.inOut', duration: 0.7 }, i * 0.05));
+        tl.to(state, { p: 1, duration: 1, onUpdate: draw }, 0);
+        draw();
       }
 
       /* Trabajo seleccionado: la lista activa cambia con el scroll y al pasar el cursor */
