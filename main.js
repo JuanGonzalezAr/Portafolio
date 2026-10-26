@@ -239,6 +239,12 @@
         .fromTo(bar, { y: () => hero.offsetHeight + 16 }, { y: 0 }, 0)
         .to('.bar__tag', { opacity: 0, ease: 'none', duration: 0.4 }, 0);
 
+      /* El texto del inicio se desvanece para no chocar con el logotipo al encogerse */
+      gsap.fromTo('.hero__lead, .hero__meta, .hero__scroll', { opacity: 1 }, {
+        opacity: 0, ease: 'none', immediateRender: false,
+        scrollTrigger: { trigger: root, start: 0, end: () => innerHeight * 0.3, scrub: true },
+      });
+
       /* Fórmula: las palabras se separan hasta los bordes */
       gsap.fromTo('.eq', { width: '34%' }, {
         width: '100%', ease: 'none',
