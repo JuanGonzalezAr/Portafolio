@@ -32,10 +32,6 @@
   function fitWordmark(el) {
     const word = $('.wm__word', el);
     if (!word) return;
-    word.style.fontSize = '400px';
-    const sum = [...word.children].reduce((a, l) => a + l.offsetWidth, 0);
-    const target = el.offsetWidth;
-    if (sum > 0 && target > 0) word.style.fontSize = (400 * target / sum).toFixed(2) + 'px';
   }
   function fitAll() {
     $$('.wm').forEach(fitWordmark);
@@ -151,7 +147,7 @@
 
   /* ---------- HUD: cambia a blanco cuando está sobre fondos de color ---------- */
   function hudWatch() {
-    $$('.showcase__frame, .col, .tickets, .foot').forEach(e => (e.dataset.bg = 'dark'));
+    $$('.col, .tickets, .foot').forEach(e => (e.dataset.bg = 'dark'));
     const l = $('.hud--l'), r = $('.hud--r');
     if (!l || !r) return;
     let queued = false;
