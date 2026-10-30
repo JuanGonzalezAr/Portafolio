@@ -8,6 +8,13 @@
   const tick = () => $$('[data-clock]').forEach(e => (e.textContent = fmt.format(new Date()) + ' (COT)'));
   tick(); setInterval(tick, 1000);
 
+
+  // Proceso: se abre un paso a la vez
+  document.querySelectorAll('.kc__acc details').forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('.kc__acc details[open]').forEach(o => { if (o !== d) o.removeAttribute('open'); });
+    if (window.ScrollTrigger) setTimeout(() => ScrollTrigger.refresh(), 60);
+  }));
+
   const gs = window.gsap, ST = window.ScrollTrigger;
   if (reduce || !gs || !ST) return;
   gs.registerPlugin(ST, ...(window.SplitText ? [SplitText] : []));

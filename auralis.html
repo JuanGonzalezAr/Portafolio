@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Auralis — Caso de estudio · Sebastián González</title>
 <meta name="description" content="Caso de estudio: Auralis, una app para controlar audífonos y saber con tiempo cuánto durará la batería. Investigación, arquitectura de información y diseño de interfaz.">
-<meta name="theme-color" content="#0a1226">
+<meta name="theme-color" content="#101a2d">
 <meta property="og:title" content="Auralis — Caso de estudio">
 <meta property="og:description" content="Una app para controlar audífonos y no quedarse sin batería en el momento menos oportuno.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Fira+Code:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Vazirmatn:wght@300..700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body class="case">
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -92,13 +92,67 @@
     <div class="kc__main">
       <p class="kc__eye mono">El proceso de diseño</p>
       <h2 class="kc__h" id="k3" data-reveal>De la persona <em>a la pantalla.</em></h2>
-      <ol class="kc__steps" data-rise>
-        <li><span class="mono">01</span><div><h3>Mapa de empatía</h3><p>Resumí qué dicen, piensan, hacen y sienten. Aparece una y otra vez el miedo a quedarse sin batería en un momento importante.</p></div><em class="mono">Entender</em></li>
-        <li><span class="mono">02</span><div><h3>User persona</h3><p>Jorge, 34 años, arquitecto en Medellín. Necesita alertas claras para no quedarse sin audición en reuniones ni en obra.</p></div><em class="mono">Definir</em></li>
-        <li><span class="mono">03</span><div><h3>Arquitectura de información</h3><p>Cuatro áreas desde el home: Dirección, Home, Ecualizador y Menú. La batería siempre a la vista.</p></div><em class="mono">Ordenar</em></li>
-        <li><span class="mono">04</span><div><h3>Journey map</h3><p>Seis fases, del descubrimiento al soporte, para convertir los puntos de dolor en oportunidades.</p></div><em class="mono">Recorrer</em></li>
-        <li><span class="mono">05</span><div><h3>Wireframes y alta fidelidad</h3><p>Del boceto a las pantallas finales en Figma, con componentes reutilizables.</p></div><em class="mono">Diseñar</em></li>
-      </ol>
+      <div class="kc__acc" data-rise>
+        <details open>
+          <summary><span class="mono">01</span><h3>Mapa de empatía</h3><em class="mono">Entender</em><i aria-hidden="true"></i></summary>
+          <div class="acc__body">
+            <p class="acc__lead">Resumí qué dicen, piensan, hacen y sienten los usuarios. Aparece una y otra vez el miedo a quedarse sin batería en un momento importante.</p>
+            <div class="acc__grid acc__grid--3">
+              <div><h4 class="mono">Dicen</h4><p>“No sé cuánto tiempo más me durará la batería.”</p></div>
+              <div><h4 class="mono">Piensan</h4><p>“Ojalá hubiera una app que me avisara con tiempo.”</p></div>
+              <div><h4 class="mono">Hacen</h4><p>Revisan el nivel todo el tiempo y llevan baterías de repuesto.</p></div>
+              <div><h4 class="mono">Temen</h4><p>Quedarse sin audición en clase, en una reunión o en una cita médica.</p></div>
+              <div><h4 class="mono">Sienten</h4><p>Ansiedad, frustración e inseguridad.</p></div>
+              <div><h4 class="mono">Desean</h4><p>Autonomía, confianza y evitar interrupciones en su día.</p></div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="mono">02</span><h3>User persona</h3><em class="mono">Definir</em><i aria-hidden="true"></i></summary>
+          <div class="acc__body">
+            <div class="acc__persona">
+              <div class="acc__id"><h4 class="mono">Jorge Hernández</h4><p>34 años · arquitecto · Medellín<br>Casado, dos hijos</p></div>
+              <div class="acc__grid">
+                <div><h4 class="mono">Problemática</h4><p>Usa baterías desechables porque le dan seguridad, pero a veces marca 50 % y se apaga de golpe, dejándolo sin audición en momentos importantes.</p></div>
+                <div><h4 class="mono">Necesita</h4><p>Control preciso de la batería, alertas claras y anticipadas, y un recordatorio para llevar repuestos.</p></div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="mono">03</span><h3>Arquitectura de información</h3><em class="mono">Ordenar</em><i aria-hidden="true"></i></summary>
+          <div class="acc__body">
+            <p class="acc__lead">Cuatro áreas desde el home. El nivel de batería está presente en las pantallas de control para que nunca se pierda de vista.</p>
+            <div class="acc__grid acc__grid--4">
+              <div><h4 class="mono">Dirección</h4><p>Imagen, nivel de batería y avatar.</p></div>
+              <div><h4 class="mono">Home</h4><p>Imagen, volumen y nivel de batería.</p></div>
+              <div><h4 class="mono">Ecualizador</h4><p>Anillos para graves, medios y agudos.</p></div>
+              <div><h4 class="mono">Menú</h4><p>Información, configuración e idioma, encontrar dispositivo y centros de atención.</p></div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="mono">04</span><h3>Journey map</h3><em class="mono">Recorrer</em><i aria-hidden="true"></i></summary>
+          <div class="acc__body">
+            <p class="acc__lead">Seis fases, del descubrimiento al soporte. En cada una, el punto de dolor se volvió una oportunidad de diseño.</p>
+            <ol class="acc__journey">
+              <li><b>Descubrimiento</b><span>Apps complicadas → una interfaz sencilla</span></li>
+              <li><b>Primer uso</b><span>Poco control → control total de los parámetros</span></li>
+              <li><b>Ajustes de sonido</b><span>No entiende conversaciones → ecualizador y dirección</span></li>
+              <li><b>Personalización</b><span>Interfaz simple → personalizar para sentirla propia</span></li>
+              <li><b>Uso diario</b><span>Mucha navegación → un flujo simple y al grano</span></li>
+              <li><b>Soporte</b><span>Poca confianza → más opciones de contacto</span></li>
+            </ol>
+          </div>
+        </details>
+        <details>
+          <summary><span class="mono">05</span><h3>Wireframes y alta fidelidad</h3><em class="mono">Diseñar</em><i aria-hidden="true"></i></summary>
+          <div class="acc__body">
+            <p class="acc__lead">Del boceto a las pantallas finales en Figma, con componentes reutilizables.</p>
+            <div class="acc__phones"><img src="auralis-home.png" alt="Home" loading="lazy" width="210" height="455"><img src="auralis-direccion.png" alt="Dirección" loading="lazy" width="210" height="455"><img src="auralis-ecualizador.png" alt="Ecualizador" loading="lazy" width="210" height="455"></div>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -207,6 +261,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
-<script src="case.js"></script>
+<script src="case.js?v=2"></script>
 </body>
 </html>
