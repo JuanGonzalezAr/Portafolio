@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auralis — Caso de estudio · Sebastián González</title>
+<meta name="description" content="Caso de estudio: Auralis, una app para controlar audífonos y saber con tiempo cuánto durará la batería. Investigación, arquitectura de información y diseño de interfaz.">
+<meta name="theme-color" content="#CF1830">
+<meta property="og:title" content="Auralis — Caso de estudio">
+<meta property="og:description" content="Una app para controlar audífonos y no quedarse sin batería en el momento menos oportuno.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Fira+Code:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Vazirmatn:wght@300..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="case">
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ENCABEZADO FIJO: el logotipo gigante se encoge hasta la barra al hacer scroll -->
+
+<header class="top top--page" id="top">
+  <a class="wm wm--hero" href="index.html" aria-label="Sebastián, inicio">
+    <span class="wm__word" aria-hidden="true">
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:72 1 0"><span><svg class="g" viewBox="0 0 72 100" focusable="false"><g><rect width="24" height="100"/><rect x="27" width="45" height="24"/><rect x="27" y="38" width="37" height="24"/><rect x="27" y="76" width="45" height="24"/></g></svg></span></span>
+      <span class="wm__l" style="flex:82 1 0"><span><svg class="g" viewBox="0 0 82 100" focusable="false"><g><rect width="24" height="100"/><path class="s" d="M27 12H50A19 19 0 0 1 50 50H27"/><path class="s" d="M27 50H50A19 19 0 0 1 50 88H27"/></g></svg></span></span>
+      <span class="wm__l" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span></span>
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:76 1 0"><span><svg class="g" viewBox="0 0 76 100" focusable="false"><g><rect width="36" height="24"/><rect x="39" width="37" height="24"/><rect x="26" y="27" width="24" height="73"/></g></svg></span></span>
+      <span class="wm__l" style="flex:24 1 0"><span><svg class="g" viewBox="0 0 24 100" focusable="false"><g><rect width="24" height="47"/><rect y="50" width="24" height="50"/></g></svg></span></span>
+      <span class="wm__l wm__l--acc" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span><svg class="wm__shape" viewBox="-1 -1 2 2" focusable="false"><polygon points="0,-0.94 0.81,0.47 -0.81,0.47"/></svg></span>
+      <span class="wm__l" style="flex:96 1 0"><span><svg class="g" viewBox="0 0 96 100" focusable="false"><g><rect width="20" height="100"/><rect x="76" width="20" height="100"/><path d="M23 0H47L73 100H49Z"/></g></svg></span></span>
+    </span>
+  </a>
+  <div class="bar">
+    <p class="bar__tag">Diseño UX/UI &amp; Producto</p>
+    <nav class="bar__nav" aria-label="Principal">
+      <a href="index.html#proceso">Proceso</a>
+      <a href="index.html#trabajo">Proyectos</a>
+      <a href="index.html#colaborar">Colaborar</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a class="bar__mail" href="mailto:juansgonsaleza@gmail.com">juansgonsaleza@gmail.com</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="chero">
+    <p class="ckick mono" data-intro><a href="index.html#trabajo">← Trabajo seleccionado</a><span>Caso de estudio · 01</span></p>
+    <h1 class="chero__title" data-intro>Auralis</h1>
+    <p class="chero__lead" data-intro>Una app para controlar audífonos y <em>no quedarse sin batería en el momento menos oportuno.</em></p>
+    <dl class="cmeta" data-intro>
+      <div><dt class="mono">Rol</dt><dd>UX/UI Designer</dd></div>
+      <div><dt class="mono">Plataforma</dt><dd>App móvil · iOS · modo oscuro</dd></div>
+      <div><dt class="mono">Enfoque</dt><dd>Investigación, arquitectura de información y UI</dd></div>
+      <div><dt class="mono">Herramientas</dt><dd>Figma · Whimsical</dd></div>
+    </dl>
+  </section>
+
+  <div class="cband" data-img><img src="auralis-home.png" alt="" width="210" height="455"><img src="auralis-ecualizador.png" alt="" width="210" height="455"><img src="auralis-direccion.png" alt="" width="210" height="455"><img src="auralis-dispositivos.png" alt="" width="210" height="455"></div>
+
+  <section class="cs" aria-labelledby="s1">
+    <div class="cs__head"><p class="ckick mono">01 · Problemática</p><h2 id="s1" data-reveal>No saber <em>cuánto durará la batería.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Las personas que usan dispositivos auditivos no saben con exactitud cuánto tiempo les durará la batería. Eso genera situaciones incómodas y, a veces, aislamiento cuando el dispositivo se apaga en medio del trabajo, el estudio o la vida social.</p>
+      <p data-reveal>El proyecto busca que puedan conocer el estado de la batería de forma clara y anticipada, con alertas oportunas que les ayuden a planificar la recarga o el cambio.</p>
+    </div>
+    <figure class="cs__fig " data-img><img src="auralis-problematica.jpg" alt="Planteamiento de la problemática" loading="lazy"><figcaption class="mono">Planteamiento del problema</figcaption></figure>
+  </section>
+
+  <section class="cs" aria-labelledby="s2">
+    <div class="cs__head"><p class="ckick mono">02 · Investigación</p><h2 id="s2" data-reveal>Escuchar lo que <em>ya dicen los usuarios.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Investigación cuantitativa: encuestas y foros en línea donde las personas cuentan su experiencia con los audífonos, qué les funciona y qué no.</p>
+    </div>
+    <ul class="finds">
+      <li><h3>Opiniones divididas</h3><p>Hay respuestas muy positivas, incluso de personas que ayudan a otras, y también preocupación por modelos costosos que no siempre se ajustan a la pérdida auditiva de cada persona.</p></li>
+      <li><h3>Lo que más molesta</h3><p>La mayoría de las respuestas se inclinan hacia lo negativo: la duración de la batería, los servicios profesionales y las limitaciones tecnológicas.</p></li>
+      <li><h3>Lo que piden</h3><p>Mejor conexión con el celular, mejor reconocimiento de voz en ruido, funciones para el tinnitus y más vida útil de la batería. Algunos prefieren baterías reemplazables.</p></li>
+    </ul>
+    <figure class="cs__fig half" data-img><img src="auralis-encuestas-1.jpg" alt="Hallazgos de encuestas y comentarios de foros" loading="lazy"><figcaption class="mono">Encuestas y comentarios de foros</figcaption></figure>
+    <figure class="cs__fig half" data-img><img src="auralis-encuestas-2.jpg" alt="Más comentarios de usuarios en foros" loading="lazy"><figcaption class="mono">Comentarios de usuarios</figcaption></figure>
+  </section>
+
+  <section class="cs" aria-labelledby="s3">
+    <div class="cs__head"><p class="ckick mono">03 · Mapa de empatía</p><h2 id="s3" data-reveal>Qué dicen, piensan, <em>hacen y sienten.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Resumí la investigación en un mapa de empatía. Aparece una y otra vez la ansiedad de quedarse sin batería en un momento importante y el deseo de saber con tiempo cuánto queda.</p>
+    </div>
+    <figure class="cs__fig " data-img><img src="auralis-empatia.jpg" alt="Mapa de empatía" loading="lazy"><figcaption class="mono">Mapa de empatía</figcaption></figure>
+  </section>
+
+  <section class="cs" aria-labelledby="s4">
+    <div class="cs__head"><p class="ckick mono">04 · User persona</p><h2 id="s4" data-reveal>Jorge, 34 años, <em>arquitecto en Medellín.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Usa audífonos con baterías desechables porque le dan seguridad. Necesita una forma confiable y sencilla de manejar la energía, con alertas claras para no quedarse sin audición en reuniones o en obra.</p>
+    </div>
+    <figure class="cs__fig " data-img><img src="auralis-persona.jpg" alt="User persona: Jorge Hernández" loading="lazy"><figcaption class="mono">User persona</figcaption></figure>
+  </section>
+
+  <section class="cs" aria-labelledby="s5">
+    <div class="cs__head"><p class="ckick mono">05 · Arquitectura de información</p><h2 id="s5" data-reveal>Cuatro áreas <em>desde el home.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Ordené las funciones en cuatro ramas: Dirección, Home, Ecualizadores y Menú. El nivel de batería está presente en las pantallas de control para que nunca se pierda de vista.</p>
+    </div>
+    <figure class="cs__fig " data-img><img src="auralis-arquitectura.jpg" alt="Arquitectura de información de la app" loading="lazy"><figcaption class="mono">Arquitectura de información</figcaption></figure>
+  </section>
+
+  <section class="cs" aria-labelledby="s6">
+    <div class="cs__head"><p class="ckick mono">06 · Journey map</p><h2 id="s6" data-reveal>Seis fases, <em>del descubrimiento al soporte.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>El journey map recorre acciones, puntos de contacto, pensamientos y sentimientos en cada fase, y convierte los puntos de dolor en oportunidades de diseño.</p>
+    </div>
+    <div class="cs__scroll" data-img><img src="auralis-journey.jpg" alt="Journey map en seis fases" loading="lazy"></div>
+  </section>
+
+  <section class="cs cs--shots" aria-labelledby="s7">
+    <div class="cs__head"><p class="ckick mono">07 · Pantallas</p><h2 id="s7" data-reveal>De la conexión <em>al ajuste fino.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Flujo de bienvenida y conexión del dispositivo, un home con volumen y batería de cada audífono, control de dirección, ecualizador, menú y ajustes de idioma.</p>
+    </div>
+    <div class="shots" data-img tabindex="0" aria-label="Pantallas de la app, desliza para ver más"><figure class="shot"><img src="auralis-splash.png" alt="Pantalla de carga de Auralis" loading="lazy" width="210" height="455"><figcaption class="mono">Inicio</figcaption></figure><figure class="shot"><img src="auralis-bienvenida.png" alt="Pantalla de bienvenida con instrucciones para conectar" loading="lazy" width="210" height="455"><figcaption class="mono">Bienvenida</figcaption></figure><figure class="shot"><img src="auralis-dispositivos.png" alt="Lista de audífonos Widex" loading="lazy" width="210" height="455"><figcaption class="mono">Conectar dispositivo</figcaption></figure><figure class="shot"><img src="auralis-dispositivos2.png" alt="Lista de audífonos Phonak" loading="lazy" width="210" height="455"><figcaption class="mono">Conectar dispositivo · Phonak</figcaption></figure><figure class="shot"><img src="auralis-home.png" alt="Pantalla de inicio con volumen y batería" loading="lazy" width="210" height="455"><figcaption class="mono">Home</figcaption></figure><figure class="shot"><img src="auralis-direccion.png" alt="Control de dirección del sonido" loading="lazy" width="210" height="455"><figcaption class="mono">Dirección</figcaption></figure><figure class="shot"><img src="auralis-ecualizador.png" alt="Ecualizador circular con graves, medios y agudos" loading="lazy" width="210" height="455"><figcaption class="mono">Ecualizador</figcaption></figure><figure class="shot"><img src="auralis-menu.png" alt="Menú de la app" loading="lazy" width="210" height="455"><figcaption class="mono">Menú</figcaption></figure><figure class="shot"><img src="auralis-ajustes.png" alt="Ajustes de la app" loading="lazy" width="210" height="455"><figcaption class="mono">Ajustes</figcaption></figure><figure class="shot"><img src="auralis-idiomas.png" alt="Selección de idioma" loading="lazy" width="210" height="455"><figcaption class="mono">Idiomas</figcaption></figure></div>
+  </section>
+
+  <section class="cs" aria-labelledby="s8">
+    <div class="cs__head"><p class="ckick mono">08 · Sistema de diseño</p><h2 id="s8" data-reveal>Componentes <em>reutilizables.</em></h2></div>
+    <div class="cs__body">
+      <p data-reveal>Tarjetas de dispositivos, control de dirección, indicadores de batería, botones, menú e idiomas, sobre una paleta oscura que cuida los ojos y la batería del teléfono.</p>
+    </div>
+    <figure class="cs__fig " data-img><img src="auralis-sistema.jpg" alt="Componentes del sistema de diseño" loading="lazy"><figcaption class="mono">Componentes del sistema de diseño</figcaption></figure>
+  </section>
+
+  <section class="cnext">
+    <p class="ckick mono">Siguiente</p>
+    <a class="cnext__link" href="index.html#trabajo"><span>Volver a</span> <em>todos los proyectos →</em></a>
+  </section>
+</main>
+
+<footer class="foot" data-hud="light">
+  <div class="foot__grid">
+    <a class="foot__mail" href="mailto:juansgonsaleza@gmail.com">juansgonsaleza@gmail.com</a>
+    <p class="foot__time mono"><span>Hora local</span><br><b data-clock>--:--:--</b></p>
+    <ul class="foot__links">
+      <li><a href="https://www.linkedin.com/in/juan-sebastian-gonzalez-81a608424/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/JuanGonzalezAr" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="mailto:juansgonsaleza@gmail.com">Correo</a></li>
+    </ul>
+    <ul class="foot__links">
+      <li><a href="index.html#proceso">Proceso</a></li>
+      <li><a href="index.html#trabajo">Proyectos</a></li>
+      <li><a href="index.html#colaborar">Colaborar</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="wm wm--foot" aria-hidden="true">
+    <span class="wm__word">
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:72 1 0"><span><svg class="g" viewBox="0 0 72 100" focusable="false"><g><rect width="24" height="100"/><rect x="27" width="45" height="24"/><rect x="27" y="38" width="37" height="24"/><rect x="27" y="76" width="45" height="24"/></g></svg></span></span>
+      <span class="wm__l" style="flex:82 1 0"><span><svg class="g" viewBox="0 0 82 100" focusable="false"><g><rect width="24" height="100"/><path class="s" d="M27 12H50A19 19 0 0 1 50 50H27"/><path class="s" d="M27 50H50A19 19 0 0 1 50 88H27"/></g></svg></span></span>
+      <span class="wm__l" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span></span>
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:76 1 0"><span><svg class="g" viewBox="0 0 76 100" focusable="false"><g><rect width="36" height="24"/><rect x="39" width="37" height="24"/><rect x="26" y="27" width="24" height="73"/></g></svg></span></span>
+      <span class="wm__l" style="flex:24 1 0"><span><svg class="g" viewBox="0 0 24 100" focusable="false"><g><rect width="24" height="47"/><rect y="50" width="24" height="50"/></g></svg></span></span>
+      <span class="wm__l wm__l--acc" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span><svg class="wm__shape" viewBox="-1 -1 2 2" focusable="false"><polygon points="0,-0.94 0.81,0.47 -0.81,0.47"/></svg></span>
+      <span class="wm__l" style="flex:96 1 0"><span><svg class="g" viewBox="0 0 96 100" focusable="false"><g><rect width="20" height="100"/><rect x="76" width="20" height="100"/><path d="M23 0H47L73 100H49Z"/></g></svg></span></span>
+    </span>
+  </div>
+  <p class="foot__legal mono">© 2026 Juan Sebastián González · Medellín, Colombia</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script src="case.js"></script>
+</body>
+</html>
