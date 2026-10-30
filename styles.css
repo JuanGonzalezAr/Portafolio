@@ -333,3 +333,22 @@ a.pill:hover{background:var(--red);color:#fff}
   .bar__nav,.bar__mail{transition:opacity .3s}
   .is-scrolled .bar__nav,.is-scrolled .bar__mail{opacity:0;pointer-events:none}
 }
+
+/* ==========================================================
+   Ajustes: encabezado fijo con fondo + textos con más presencia
+   ========================================================== */
+.top::before{content:'';position:absolute;left:0;right:0;top:0;height:var(--hh,76px);background:var(--paper);pointer-events:none}
+@media (max-width:899px){.top::before{--hh:64px}}
+
+.showcase__label{font-size:clamp(14px,1.05vw,17px);font-weight:600;letter-spacing:.07em}
+
+/* fórmula */
+.eq{font-size:clamp(13px,1.3vw,20px);font-weight:600;letter-spacing:.04em;border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:.9em 0}
+
+/* textos de apoyo: más grandes y anclados con una línea fina */
+.statement__small{font-size:clamp(18px,1.7vw,28px);line-height:1.18;max-width:32ch;border-top:1px solid currentColor;padding-top:.8em}
+.ab{font-size:clamp(15px,1.3vw,20px);font-weight:600;max-width:none;width:100%;border-top:1px solid currentColor;padding-top:.8em}
+.statement__road{border-top:1px solid currentColor;padding-top:.8em;align-items:center}
+.statement__road p{font-size:clamp(20px,2vw,32px);line-height:1.1;max-width:20ch}
+.process__kicker{font-size:clamp(14px,1.1vw,17px);font-weight:600;letter-spacing:.07em;border-top:1px solid currentColor;padding-top:.8em}
+.process__note{font-size:clamp(18px,1.7vw,28px);line-height:1.15;max-width:26ch;border-top:1px solid currentColor;padding-top:.6em}
