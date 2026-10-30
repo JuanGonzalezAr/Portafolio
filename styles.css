@@ -241,7 +241,7 @@ a.pill:hover{background:var(--red);color:#fff}
 .icon__img--foto{background-image:url(foto.jpg)}
 .icon__img--html{background:linear-gradient(#fff 0 18%,#CF1830 18% 22%,#fff 22%)}
 .icon__img--md{background:repeating-linear-gradient(#fff 0 3px,#d9d9d9 3px 4px)}
-.win{position:absolute;z-index:5;min-width:30%;background:#fff;border:1px solid rgba(207,24,48,.28);box-shadow:0 .8cqw 2cqw rgba(0,0,40,.28);color:var(--red);font-size:clamp(8px,1.45cqw,15px);line-height:1.28}
+.win{position:absolute;z-index:5;min-width:30%;background:#fff;border:1px solid rgba(143,178,255,.22);box-shadow:0 .8cqw 2cqw rgba(0,0,40,.28);color:var(--red);font-size:clamp(8px,1.45cqw,15px);line-height:1.28}
 .win[hidden]{display:none}
 .win__bar{display:flex;align-items:center;gap:.6em;padding:.55em .8em;cursor:grab;user-select:none;touch-action:none;border-bottom:1px solid rgba(207,24,48,.2);font-weight:600}
 .win__bar.is-drag{cursor:grabbing}
@@ -524,7 +524,7 @@ a.pill:hover{background:var(--red);color:#fff}
 .kc__main{grid-column:3/-1;min-width:0}
 .kc__eye{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 1.4em;opacity:.8}
 .kc__h{font-size:clamp(44px,7.4vw,128px);line-height:.94;font-weight:700;letter-spacing:-.035em;margin:0}
-.kc__h em{display:block;font-style:normal;opacity:.62}
+.kc__h em{display:block;font-family:inherit;font-style:normal;opacity:.6}
 .kc__lead{font-size:clamp(18px,1.7vw,28px);line-height:1.2;max-width:34ch;margin:clamp(24px,4vh,44px) 0 0}
 .kc__two,.kc__three{display:grid;gap:var(--pad);margin:clamp(40px,8vh,100px) 0 0;padding:0;list-style:none;border-top:1px solid currentColor}
 .kc__two{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -535,21 +535,21 @@ a.pill:hover{background:var(--red);color:#fff}
 .kc__two p,.kc__three p,.kc__steps p,.kc__sol p{font-size:clamp(15px,1.15vw,18px);line-height:1.35;max-width:38ch;opacity:.85}
 
 .kc__steps{list-style:none;margin:clamp(40px,8vh,100px) 0 0;padding:0;border-top:1px solid currentColor}
-.kc__steps li{display:grid;grid-template-columns:clamp(40px,5vw,80px) minmax(0,1fr) auto;gap:var(--pad);align-items:start;padding:clamp(20px,3.4vh,34px) 0;border-bottom:1px solid rgba(207,24,48,.28)}
+.kc__steps li{display:grid;grid-template-columns:clamp(40px,5vw,80px) minmax(0,1fr) auto;gap:var(--pad);align-items:start;padding:clamp(20px,3.4vh,34px) 0;border-bottom:1px solid rgba(143,178,255,.22)}
 .kc__steps li>span{font-size:12px;font-weight:600;padding-top:.5em}
 .kc__steps h3{font-size:clamp(22px,2.4vw,40px);margin:0 0 .35em}
 .kc__steps em{font-style:normal;font-size:12px;opacity:.7;padding-top:.7em;text-transform:uppercase;letter-spacing:.06em}
 
-.kc--soft{background:#fff3f4}
-.kc--red{background:var(--red);color:#fff}
-.kc--red .kc__h em{color:#ffd0d6;opacity:1}
+.kc--soft{background:#0e1a38}
+.kc--red{background:var(--band);color:#fff}
+.kc--red .kc__h em{color:#bcd0ff;opacity:1}
 .kc--red .kc__three{border-top-color:rgba(255,255,255,.4)}
 
 .kc__sol{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:calc(var(--pad)*3);align-items:center;margin-top:clamp(40px,8vh,90px)}
-.kc__phone{width:min(100%,340px);height:auto;border-radius:34px;box-shadow:0 30px 60px rgba(139,18,35,.25);justify-self:center}
+.kc__phone{width:min(100%,340px);height:auto;border-radius:34px;box-shadow:0 30px 70px rgba(0,0,0,.55);justify-self:center}
 .kc__sol ul{list-style:none;margin:0;padding:0}
-.kc__sol li{padding:clamp(18px,3vh,30px) 0;border-top:1px solid rgba(207,24,48,.3)}
-.kc__sol li:last-child{border-bottom:1px solid rgba(207,24,48,.3)}
+.kc__sol li{padding:clamp(18px,3vh,30px) 0;border-top:1px solid rgba(143,178,255,.25)}
+.kc__sol li:last-child{border-bottom:1px solid rgba(143,178,255,.25)}
 
 .kc--shots{padding-bottom:clamp(40px,8vh,100px)}
 .kc--shots .shots{grid-column:1/-1;padding-top:clamp(10px,3vh,30px)}
@@ -564,3 +564,20 @@ a.pill:hover{background:var(--red);color:#fff}
   .kc__steps li{grid-template-columns:36px minmax(0,1fr)}
   .kc__steps em{display:none}
 }
+
+/* Identidad del proyecto Auralis: modo oscuro, azul profundo */
+body.case{--paper:#0a1226;--red:#8fb2ff;--red-deep:#5f86e6;--band:#16348f;background:#0a1226;color:#8fb2ff}
+body.case .chero__title{color:#dce7ff}
+body.case .chero__lead,body.case .cmeta dd{color:#dce7ff}
+body.case .kc__h{color:#e6eeff}
+body.case .kc--red .kc__n b,body.case .kc--red .kc__n span{color:#fff}
+body.case .kc h3{color:#e6eeff}
+body.case .kc__two p,body.case .kc__three p,body.case .kc__steps p,body.case .kc__sol p{color:#a9bfe8;opacity:1}
+body.case .kc__lead{color:#a9bfe8}
+body.case .kc--red h3{color:#fff}
+body.case .kc--red .kc__three p{color:#d3e0ff}
+body.case .cband{background:#16348f}
+body.case .cnext__link{color:#e6eeff}
+body.case .shot figcaption{color:#8fb2ff}
+body.case .chips span{color:#cfe0ff}
+body.case .foot{background:#070d1c}
