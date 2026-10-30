@@ -665,3 +665,11 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
   .acc__grid,.acc__grid--3,.acc__grid--4,.acc__persona,.acc__journey{grid-template-columns:1fr}
   .acc__phones img{height:300px}
 }
+
+.acc__fig{margin:clamp(22px,4vh,40px) 0 0}
+.acc__fig img{display:block;width:100%;height:auto;border-radius:14px;background:#e9edf5;filter:brightness(.9) saturate(.9);border:1px solid rgba(159,180,216,.25)}
+.kc__cta{display:inline-flex;align-items:center;gap:.9em;margin-top:clamp(28px,5vh,50px);padding:1em 1.5em 1em 1.7em;border:1px solid rgba(159,180,216,.5);border-radius:999px;font-size:clamp(15px,1.25vw,19px);font-weight:600;color:#d3deef;transition:background .25s,color .25s,border-color .25s}
+.kc__cta i{font-style:normal;transition:transform .25s}
+.kc__cta:hover{background:#d3deef;color:#101a2d;border-color:#d3deef}
+.kc__cta:hover i{transform:translate(3px,-3px)}
+.kc__cta:focus-visible{outline:2px solid var(--red);outline-offset:4px}
