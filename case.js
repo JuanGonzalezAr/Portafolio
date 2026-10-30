@@ -35,6 +35,14 @@
     }
   });
 
+  // Bloques de texto: suben y aparecen
+  $$('[data-rise]').forEach(el => {
+    const items = el.querySelectorAll(':scope > ul > li, :scope > article, :scope > li, :scope > blockquote, :scope > section, :scope .cards > article, :scope .tree__cols > section, :scope .persona__id, :scope .persona__body > article, :scope .kws li, :scope > div, :scope .tree__root');
+    const t = items.length ? items : [el];
+    gs.fromTo(t, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.08,
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+  });
+
   // Imágenes: salen del desenfoque
   $$('[data-img]').forEach(el => {
     gs.fromTo(el, { opacity: 0.15, filter: 'blur(14px)', y: 40 }, {

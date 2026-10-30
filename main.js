@@ -274,10 +274,13 @@
     /* ----- Escritorio: secciones fijas con scroll ----- */
     mm.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
 
-      /* Proyectos destacados: deslizamiento horizontal con desenfoque */
+      /* Proyectos destacados: deslizamiento horizontal con desenfoque.
+         La primera y la última tarjeta quedan centradas y enfocadas, con una pausa de scroll en cada extremo. */
       {
         const sec = $('.showcase'), frame = $('.showcase__frame'), track = $('.showcase__track');
         const slides = $$('.slide', track);
+        const pad = () => Math.max(0, (frame.clientWidth - slides[0].offsetWidth) / 2);
+        const setPad = () => { track.style.paddingLeft = track.style.paddingRight = pad() + 'px'; };
         const dist = () => Math.max(0, track.scrollWidth - frame.clientWidth);
         const blur = () => {
           const fr = frame.getBoundingClientRect();
@@ -290,11 +293,15 @@
             s.style.opacity = (1 - k * 0.55).toFixed(2);
           });
         };
-        gsap.to(track, {
-          x: () => -dist(), ease: 'none',
-          scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: true, invalidateOnRefresh: true, onUpdate: blur, onRefresh: blur },
+        setPad();
+        const HOLD = 0.18;
+        const tl = gsap.timeline({
+          defaults: { ease: 'none' },
+          scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + (dist() * (1 + HOLD * 2) + innerHeight * 0.1), pin: true, scrub: true, invalidateOnRefresh: true, onUpdate: blur,
+            onRefresh: () => { setPad(); blur(); } },
         });
-        const reset = () => slides.forEach(s => { s.style.filter = ''; s.style.opacity = ''; });
+        tl.to({}, { duration: HOLD }).to(track, { x: () => -dist(), duration: 1 }).to({}, { duration: HOLD });
+        const reset = () => { track.style.paddingLeft = track.style.paddingRight = ''; slides.forEach(s => { s.style.filter = ''; s.style.opacity = ''; }); };
         return reset;
       }
     });
