@@ -79,14 +79,20 @@
       <h2 class="cs-h2" data-reveal>Tableros para ordenar, comunidad para crecer.</h2>
       <div data-rise><p>Una app pensada para publicar rápido y mostrar el trabajo de forma agradable.</p><ol class="cs-list"><li><span>01</span><div><h3>Tableros de proyectos destacados</h3><p>El inicio reúne Tableros, Mis proyectos, Recientes y Favoritos en carruseles, con un buscador arriba para llegar rápido a lo que se busca.</p><em>Destacar</em></div></li><li><span>02</span><div><h3>Tableros por categoría</h3><p>Los proyectos se agrupan según su tipo, como UI/Videojuegos, UI/Restaurantes o UI/Web, y cada tablero guarda lo que le corresponde.</p><em>Ordenar</em></div></li><li><span>03</span><div><h3>Una red para ver y seguir</h3><p>Cada persona publica su portafolio, explora el de los demás y los sigue, como en una red social del medio. El perfil muestra incluso cuántas vistas ha recibido.</p><em>Comunidad</em></div></li><li><span>04</span><div><h3>Compartir y descargar</h3><p>Un proyecto o un tablero completo se comparte o se descarga en PDF cuando hace falta.</p><em>Exportar</em></div></li><li><span>05</span><div><h3>Editar y recibir feedback</h3><p>El portafolio se edita dentro de la misma app, y quienes están en la plataforma pueden dejar comentarios para mejorarlo.</p><em>Mejorar</em></div></li></ol></div>
     </section>
-    <section class="cs-sec cs-text" aria-label="Subir y editar">
+    <section class="cs-sec cs-text" aria-label="Arquitectura de información">
       <span class="cs-n">04</span>
+      <h2 class="cs-h2" data-reveal>Todo parte del Home.</h2>
+      <div data-rise><p>Antes de dibujar pantallas ordené la estructura de la app: qué vive en cada sección y cómo se llega a ella. Desde el Home salen cuatro áreas y un recorrido principal.</p><h3>Cuatro áreas desde el Home</h3><p>Portafolio, Notificaciones, Menú hamburguesa y Perfil, cada una con su propio contenido.</p><h3>De tablero a proyecto</h3><p>Del Home se entra a los Tableros y de ahí al Detalle del proyecto, donde se puede editar, compartir y leer los comentarios.</p><h3>Lo que se ve en cada lugar</h3><p>El Home reúne buscador, tableros, mis proyectos, recientes y favoritos. Las notificaciones muestran vistas al perfil, agregados a favoritos y comentarios. El menú guarda estadísticas, compartir y descargar el portafolio, ajustes y cerrar sesión.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>Estructura y arquitectura de información</figcaption><img src="portafolios-arquitectura.jpg" alt="Estructura de contenidos y árbol de arquitectura de información de la app" loading="lazy" width="1702" height="737"></figure>
+    <section class="cs-sec cs-text" aria-label="Subir y editar">
+      <span class="cs-n">05</span>
       <h2 class="cs-h2" data-reveal>Subir un proyecto en un solo paso.</h2>
       <div data-rise><p>Subir y editar comparten la misma pantalla para que no haya nada nuevo que aprender.</p><h3>Contenido a la vista</h3><p>Cuatro espacios para sumar o arrastrar imágenes, y el nombre, la descripción y la categoría debajo.</p><h3>Comentarios a elección</h3><p>Un interruptor decide si el proyecto recibe feedback de quienes están en la plataforma.</p><h3>Editar sin empezar de cero</h3><p>Al editar, el proyecto aparece ya cargado con su contenido, para cambiar solo lo que haga falta.</p></div>
     </section>
     <figure class="cs-fig " data-img><figcaption>Subir y editar proyecto</figcaption><div class="cs-phones cs-phones--cap"><figure><img src="portafolios-subir.png" alt="Pantalla para subir un proyecto" loading="lazy" width="420" height="962"><figcaption>Subir proyecto</figcaption></figure><figure><img src="portafolios-editar.png" alt="Pantalla para editar un proyecto" loading="lazy" width="420" height="946"><figcaption>Editar proyecto</figcaption></figure></div></figure>
     <section class="cs-sec cs-text" aria-label="Sistema de diseño">
-      <span class="cs-n">05</span>
+      <span class="cs-n">06</span>
       <h2 class="cs-h2" data-reveal>Pocos componentes, reutilizados en todas partes.</h2>
       <div data-rise><p>Armé una librería de componentes y una escala de espacios para que la interfaz se sienta consistente en cada pantalla.</p><h3>Galerías</h3><p>Cuatro variantes del mismo carrusel: tableros, mis proyectos, recientes y favoritos, más la galería del portafolio.</p><h3>Controles</h3><p>Barra de búsqueda, botón con interruptor y un desplegable de categorías.</p><h3>Escala de espacios</h3><p>De XS a XXL, desde 8 hasta 80 pt, para decidir qué tan cerca o lejos va cada elemento.</p></div>
     </section>
@@ -94,7 +100,7 @@
     <div class="cs-text" data-rise><p class="cs-tag">Categorías</p><div class="cs-chips"><span>UI/Videojuegos</span><span>UI/Restaurantes</span><span>UI/Web</span><span>UI/Mobile</span><span>UI/Publicidad</span><span>UI/E-Commerce</span><span>Nueva categoría</span></div></div>
     <div style="height:clamp(60px,10vh,120px)"></div>
     <section class="cs-sec cs-text" aria-label="Mi rol">
-      <span class="cs-n">06</span>
+      <span class="cs-n">07</span>
       <h2 class="cs-h2" data-reveal>Una semana, toda la interfaz.</h2>
       <div data-rise><p>Un proyecto rápido y enfocado solo en UI: tomar la idea de la plataforma y convertirla en una aplicación clara, con una estructura fácil de recorrer.</p><h3>Estructura</h3><p>Definí cómo se organizan los tableros, las categorías y el espacio de comunidad para que todo se entienda a la primera.</p><h3>Interfaz</h3><p>Diseñé las pantallas de la aplicación pensando en que mostrar el trabajo fuera una experiencia agradable.</p><h3>Flujos clave</h3><p>Cuidé las acciones que más importan: subir, compartir, descargar en PDF, editar y recibir feedback.</p></div>
     </section>
