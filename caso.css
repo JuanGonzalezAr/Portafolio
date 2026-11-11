@@ -103,3 +103,8 @@ body.cx .foot{background:var(--fig)}
   .cs-phones{flex-wrap:wrap}
   .cs-phones img{width:calc(50% - 8px)}
 }
+
+.cs-phones--cap figure{margin:0;width:calc((100% - 3*clamp(10px,1.6vw,24px))/4);max-width:210px;text-align:center}
+.cs-phones--cap img{width:100%;max-width:none}
+.cs-phones--cap figcaption{margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+@media (max-width:820px){.cs-phones--cap figure{width:calc(50% - 8px)}}

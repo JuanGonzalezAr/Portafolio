@@ -696,3 +696,5 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .vis--portafolios{background:#ece8f6;color:#2c2647}
 .vis__phone img{box-shadow:0 22px 50px rgba(31,42,68,.22)}
 .slide__spread,.vis__spread img{box-shadow:0 18px 44px rgba(36,53,42,.22)}
+.stage--portafolios .slide__phone{box-shadow:none;border-radius:0;filter:drop-shadow(0 16px 26px rgba(44,38,71,.25))}
+.vis--portafolios .vis__phone img{box-shadow:none;border-radius:0;filter:drop-shadow(0 20px 34px rgba(44,38,71,.28))}
