@@ -265,7 +265,7 @@
           gsap.from(el, { opacity: 0, y: 30, scrollTrigger: { trigger: el, start: 'top 88%' } });
         }
       });
-      gsap.fromTo('[data-photo]', { filter: 'blur(18px)', opacity: 0.2, scale: 1.06 }, {
+      if (document.querySelector('[data-photo]')) gsap.fromTo('[data-photo]', { filter: 'blur(18px)', opacity: 0.2, scale: 1.06 }, {
         filter: 'blur(0px)', opacity: 1, scale: 1, ease: 'none',
         scrollTrigger: { trigger: '[data-photo]', start: 'top 92%', end: 'top 50%', scrub: true },
       });
