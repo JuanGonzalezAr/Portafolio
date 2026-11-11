@@ -4,17 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Auralis — Caso de estudio · Sebastián González</title>
-<meta name="description" content="Caso de estudio: Auralis, una app para controlar audífonos y saber con tiempo cuánto durará la batería. Investigación, arquitectura de información y diseño de interfaz.">
-<meta name="theme-color" content="#101a2d">
+<meta name="description" content="Caso de estudio: Auralis, una app para controlar audífonos y anticipar el estado de la batería.">
+<meta name="theme-color" content="#f5f6fa">
 <meta property="og:title" content="Auralis — Caso de estudio">
-<meta property="og:description" content="Una app para controlar audífonos y no quedarse sin batería en el momento menos oportuno.">
+<meta property="og:description" content="Caso de estudio: Auralis, una app para controlar audífonos y anticipar el estado de la batería.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Fira+Code:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Vazirmatn:wght@300..700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="caso.css?v=1">
 </head>
-<body class="case">
+<body class="cx cx--auralis">
 <a class="skip" href="#main">Saltar al contenido</a>
 
 <!-- ENCABEZADO FIJO: el logotipo gigante se encoge hasta la barra al hacer scroll -->
@@ -45,184 +46,82 @@
   </div>
 </header>
 
+
 <main id="main">
-  <section class="chero">
-    <p class="ckick mono" data-intro><a href="index.html#trabajo">← Trabajo seleccionado</a><span>Caso de estudio · 01</span></p>
-    <h1 class="chero__title" data-intro>Auralis</h1>
-    <p class="chero__lead" data-intro>Una app para controlar audífonos y <em>no quedarse sin batería en el momento menos oportuno.</em></p>
-    <dl class="cmeta" data-intro>
-      <div><dt class="mono">Rol</dt><dd>UX/UI Designer</dd></div>
-      <div><dt class="mono">Plataforma</dt><dd>App móvil · iOS · modo oscuro</dd></div>
-      <div><dt class="mono">Enfoque</dt><dd>Investigación, arquitectura de información y UI</dd></div>
-      <div><dt class="mono">Herramientas</dt><dd>Figma · Whimsical</dd></div>
-    </dl>
-  </section>
-
-  <div class="cband" data-img><img src="auralis-home.png" alt="" width="210" height="455"><img src="auralis-ecualizador.png" alt="" width="210" height="455"><img src="auralis-direccion.png" alt="" width="210" height="455"><img src="auralis-dispositivos.png" alt="" width="210" height="455"></div>
-
-  <!-- 01 · EL RETO -->
-  <section class="kc" aria-labelledby="k1">
-    <div class="kc__n"><b>01</b><span class="mono">El reto</span></div>
-    <div class="kc__main">
-      <h2 class="kc__h" id="k1" data-reveal>¿Cómo saber con tiempo <em>cuánto durará la batería?</em></h2>
-      <div class="kc__two">
-        <div data-rise><h3>El problema</h3><p>Quienes usan dispositivos auditivos no saben con exactitud cuánto les durará la batería. Se apagan en medio del trabajo, el estudio o una conversación, y eso genera incomodidad y aislamiento.</p></div>
-        <div data-rise><h3>Objetivo de diseño</h3><p>Mostrar el estado de la batería de forma clara y anticipada, con alertas oportunas y controles simples para planificar la recarga o el cambio.</p></div>
-      </div>
+  <div class="cs-wrap">
+    <div class="cs-bar cs-top" data-intro>
+      <b>Auralis</b>
+      <a class="cs-pill" href="https://www.figma.com/design/edrnlkXRbGsrxStOp3vy6e/Final-Ui-Ux" target="_blank" rel="noopener">Ver el tablero en Figma ↗</a>
     </div>
-  </section>
-
-  <!-- 02 · INVESTIGACIÓN -->
-  <section class="kc kc--red" aria-labelledby="k2">
-    <div class="kc__n"><b>02</b><span class="mono">Investigación</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">Encuestas y foros en línea</p>
-      <h2 class="kc__h" id="k2" data-reveal>Escuchar antes <em>de diseñar.</em></h2>
-      <ul class="kc__three" data-rise>
-        <li><h3>Opiniones divididas</h3><p>Respuestas muy positivas, pero también preocupación por modelos costosos que no se ajustan a cada pérdida auditiva.</p></li>
-        <li><h3>Lo que más molesta</h3><p>La duración de la batería, los servicios profesionales y las limitaciones de la tecnología.</p></li>
-        <li><h3>Lo que piden</h3><p>Mejor conexión con el celular, voz más clara en ruido y más vida útil de la batería.</p></li>
-      </ul>
+    <header class="cs-hero">
+      <p class="cs-tag" data-intro>Caso 01 · App móvil · Accesibilidad</p>
+      <h1 class="cs-h1" data-intro>Que la batería nunca te sorprenda.</h1>
+      <p class="cs-lead" data-intro>Una app para controlar audífonos y saber, con tiempo, cuánta batería queda: sin apagones en medio del trabajo, el estudio o una conversación.</p>
+    </header>
+    
+    <div class="cs-meta" data-intro>
+      <dl class="cs-card"><div><dt>Rol</dt><dd>UX/UI Designer</dd></div><div><dt>Plataforma</dt><dd>App móvil · iOS · modo oscuro</dd></div><div><dt>Enfoque</dt><dd>Investigación, arquitectura de información y UI</dd></div><div><dt>Herramientas</dt><dd>Figma · Whimsical</dd></div></dl>
+      <div class="cs-stat"><b>4</b><span>áreas principales desde el home: dirección, home, ecualizador y menú</span></div>
     </div>
-  </section>
-
-  <!-- 03 · PROCESO -->
-  <section class="kc" aria-labelledby="k3">
-    <div class="kc__n"><b>03</b><span class="mono">Proceso</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">El proceso de diseño</p>
-      <h2 class="kc__h" id="k3" data-reveal>De la persona <em>a la pantalla.</em></h2>
-      <div class="kc__acc" data-rise>
-        <details open>
-          <summary><span class="mono">01</span><h3>Mapa de empatía</h3><em class="mono">Entender</em><i aria-hidden="true"></i></summary>
-          <div class="acc__body">
-            <p class="acc__lead">Resumí qué dicen, piensan, hacen y sienten los usuarios. Aparece una y otra vez el miedo a quedarse sin batería en un momento importante.</p>
-            <div class="acc__grid acc__grid--3">
-              <div><h4 class="mono">Dicen</h4><p>“No sé cuánto tiempo más me durará la batería.”</p></div>
-              <div><h4 class="mono">Piensan</h4><p>“Ojalá hubiera una app que me avisara con tiempo.”</p></div>
-              <div><h4 class="mono">Hacen</h4><p>Revisan el nivel todo el tiempo y llevan baterías de repuesto.</p></div>
-              <div><h4 class="mono">Temen</h4><p>Quedarse sin audición en clase, en una reunión o en una cita médica.</p></div>
-              <div><h4 class="mono">Sienten</h4><p>Ansiedad, frustración e inseguridad.</p></div>
-              <div><h4 class="mono">Desean</h4><p>Autonomía, confianza y evitar interrupciones en su día.</p></div>
-            </div>
-                      <figure class="acc__fig"><img src="auralis-empatia.jpg" alt="Mapa de empatía de Auralis" loading="lazy" width="1020" height="590"></figure>
-          </div>
-        </details>
-        <details>
-          <summary><span class="mono">02</span><h3>User persona</h3><em class="mono">Definir</em><i aria-hidden="true"></i></summary>
-          <div class="acc__body">
-            <div class="acc__persona">
-              <div class="acc__id"><h4 class="mono">Jorge Hernández</h4><p>34 años · arquitecto · Medellín<br>Casado, dos hijos</p></div>
-              <div class="acc__grid">
-                <div><h4 class="mono">Problemática</h4><p>Usa baterías desechables porque le dan seguridad, pero a veces marca 50 % y se apaga de golpe, dejándolo sin audición en momentos importantes.</p></div>
-                <div><h4 class="mono">Necesita</h4><p>Control preciso de la batería, alertas claras y anticipadas, y un recordatorio para llevar repuestos.</p></div>
-              </div>
-            </div>
-                      <figure class="acc__fig"><img src="auralis-persona.jpg" alt="User persona: Jorge Hernández" loading="lazy" width="1010" height="638"></figure>
-          </div>
-        </details>
-        <details>
-          <summary><span class="mono">03</span><h3>Arquitectura de información</h3><em class="mono">Ordenar</em><i aria-hidden="true"></i></summary>
-          <div class="acc__body">
-            <p class="acc__lead">Cuatro áreas desde el home. El nivel de batería está presente en las pantallas de control para que nunca se pierda de vista.</p>
-            <div class="acc__grid acc__grid--4">
-              <div><h4 class="mono">Dirección</h4><p>Imagen, nivel de batería y avatar.</p></div>
-              <div><h4 class="mono">Home</h4><p>Imagen, volumen y nivel de batería.</p></div>
-              <div><h4 class="mono">Ecualizador</h4><p>Anillos para graves, medios y agudos.</p></div>
-              <div><h4 class="mono">Menú</h4><p>Información, configuración e idioma, encontrar dispositivo y centros de atención.</p></div>
-            </div>
-                      <figure class="acc__fig"><img src="auralis-arquitectura.jpg" alt="Arquitectura de información de la app" loading="lazy" width="1632" height="677"></figure>
-          </div>
-        </details>
-        <details>
-          <summary><span class="mono">04</span><h3>Journey map</h3><em class="mono">Recorrer</em><i aria-hidden="true"></i></summary>
-          <div class="acc__body">
-            <p class="acc__lead">Seis fases, del descubrimiento al soporte. En cada una, el punto de dolor se volvió una oportunidad de diseño.</p>
-            <ol class="acc__journey">
-              <li><b>Descubrimiento</b><span>Apps complicadas → una interfaz sencilla</span></li>
-              <li><b>Primer uso</b><span>Poco control → control total de los parámetros</span></li>
-              <li><b>Ajustes de sonido</b><span>No entiende conversaciones → ecualizador y dirección</span></li>
-              <li><b>Personalización</b><span>Interfaz simple → personalizar para sentirla propia</span></li>
-              <li><b>Uso diario</b><span>Mucha navegación → un flujo simple y al grano</span></li>
-              <li><b>Soporte</b><span>Poca confianza → más opciones de contacto</span></li>
-            </ol>
-                      <figure class="acc__fig"><img src="auralis-journey.jpg" alt="Journey map del usuario" loading="lazy" width="1727" height="697"></figure>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 · SOLUCIÓN -->
-  <section class="kc kc--soft" aria-labelledby="k4">
-    <div class="kc__n"><b>04</b><span class="mono">Solución</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">La solución</p>
-      <h2 class="kc__h" id="k4" data-reveal>Información clara. <em>Control sencillo.</em></h2>
-      <p class="kc__lead" data-rise>Una interfaz oscura y sin ruido que pone el estado de cada audífono en el centro.</p>
-      <div class="kc__sol">
-        <img class="kc__phone" src="auralis-home.png" alt="Pantalla de inicio de Auralis con volumen y batería de cada audífono" width="300" height="650" loading="lazy" data-img>
-        <ul data-rise>
-          <li><h3>Batería a la vista</h3><p>Porcentaje del audífono izquierdo y derecho en la pantalla principal, con color según el nivel.</p></li>
-          <li><h3>Controles amplios</h3><p>Volumen y dirección del sonido con botones grandes y fáciles de tocar.</p></li>
-          <li><h3>Ecualizador visual</h3><p>Anillos concéntricos para graves, medios y agudos en lugar de deslizadores pequeños.</p></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 05 · SISTEMA DE DISEÑO -->
-  <section class="kc" aria-labelledby="k6">
-    <div class="kc__n"><b>05</b><span class="mono">Sistema</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">Sistema de diseño</p>
-      <h2 class="kc__h" id="k6" data-reveal>Oscuro, sobrio <em>y reutilizable.</em></h2>
-      <div class="ds" data-rise>
-        <div class="ds__sw">
-          <p class="mono">Paleta</p>
-          <div><i style="background:#1e242b"></i><span class="mono">#1E242B<br>Fondo</span></div>
-          <div><i style="background:#272424"></i><span class="mono">#272424<br>Superficie</span></div>
-          <div><i style="background:#879cad"></i><span class="mono">#879CAD<br>Acento</span></div>
-          <div><i style="background:#d3d6da"></i><span class="mono">#D3D6DA<br>Controles</span></div>
-          <div><i style="background:#ffffff;border:1px solid #ddd"></i><span class="mono">#FFFFFF<br>Texto</span></div>
-        </div>
-        <div class="ds__comp">
-          <p class="mono">Componentes</p>
-          <p class="chips"><span>Tarjeta de dispositivo</span><span>Control de dirección</span><span>Indicador de batería</span><span>Botones</span><span>Menú</span><span>Selector de idioma</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 · PRUEBAS CON USUARIOS -->
-  <section class="kc kc--red" aria-labelledby="k7">
-    <div class="kc__n"><b>06</b><span class="mono">Pruebas</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">User testing</p>
-      <h2 class="kc__h" id="k7" data-reveal>Probar con personas <em>antes de entregar.</em></h2>
-      <ul class="kc__three" data-rise>
-        <li><h3>Conectar</h3><p>Que el usuario conecte el dispositivo de manera satisfactoria, sin ayuda.</p></li>
-        <li><h3>Ajustar el volumen</h3><p>Que lo suba o lo baje rápidamente desde la primera pantalla.</p></li>
-        <li><h3>Cambiar el idioma</h3><p>Que encuentre y confirme el cambio de idioma del sistema.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 07 · TABLERO EN FIGMA -->
-  <section class="kc" aria-labelledby="k8">
-    <div class="kc__n"><b>07</b><span class="mono">Figma</span></div>
-    <div class="kc__main">
-      <p class="kc__eye mono">Pantallas y prototipo</p>
-      <h2 class="kc__h" id="k8" data-reveal>Revisa el tablero <em>completo en Figma.</em></h2>
-      <p class="kc__lead" data-rise>Wireframes, pantallas en alta fidelidad, sistema de diseño y guion de pruebas, todo en un solo archivo.</p>
-      <a class="kc__cta" href="https://www.figma.com/design/edrnlkXRbGsrxStOp3vy6e/Final-Ui-Ux" target="_blank" rel="noopener" data-rise><span>Abrir el tablero en Figma</span><i aria-hidden="true">↗</i></a>
-    </div>
-  </section>
-
-  <section class="cnext">
-    <p class="ckick mono">Siguiente</p>
-    <a class="cnext__link" href="index.html#trabajo"><span>Volver a</span> <em>todos los proyectos →</em></a>
-  </section>
+    <figure class="cs-fig " data-img><figcaption>Pantallas principales</figcaption><div class="cs-phones"><img src="auralis-home.png" alt="Pantalla de inicio" width="210" height="455"><img src="auralis-ecualizador.png" alt="Ecualizador" width="210" height="455"><img src="auralis-direccion.png" alt="Dirección del sonido" width="210" height="455"><img src="auralis-dispositivos.png" alt="Dispositivos" width="210" height="455"></div></figure>
+    <section class="cs-sec cs-text" aria-label="El reto">
+      <span class="cs-n">01</span>
+      <h2 class="cs-h2" data-reveal>¿Cómo saber con tiempo cuánto durará la batería?</h2>
+      <div data-rise><p>Quienes usan dispositivos auditivos no saben con exactitud cuánto les durará la batería. Se apagan en medio del trabajo, el estudio o una conversación, y eso genera incomodidad y aislamiento.</p><h3>Objetivo de diseño</h3><p>Mostrar el estado de la batería de forma clara y anticipada, con alertas oportunas y controles simples para planificar la recarga o el cambio.</p></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Investigación">
+      <span class="cs-n">02</span>
+      <h2 class="cs-h2" data-reveal>Escuchar antes de diseñar.</h2>
+      <div data-rise><p>Partí de encuestas y foros en línea para entender cómo viven las personas sus dispositivos auditivos.</p><h3>Opiniones divididas</h3><p>Respuestas muy positivas, pero también preocupación por modelos costosos que no se ajustan a cada pérdida auditiva.</p><h3>Lo que más molesta</h3><p>La duración de la batería, los servicios profesionales y las limitaciones de la tecnología.</p><h3>Lo que piden</h3><p>Mejor conexión con el celular, voz más clara en ruido y más vida útil de la batería.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>Encuestas y foros · hallazgos</figcaption><img src="auralis-encuestas-1.jpg" alt="Hallazgos de las encuestas y comentarios de foros" loading="lazy" width="1757" height="832"></figure>
+    <section class="cs-pull" data-rise>
+      <span class="cs-n">03 · Lo que se repite</span>
+      <blockquote>“No sé cuánto tiempo más me durará la batería.”</blockquote>
+      <p>En el mapa de empatía aparece una y otra vez el miedo a quedarse sin audición en un momento importante: en clase, en una reunión o en una cita médica. Ese miedo guió todo el diseño.</p>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Proceso">
+      <span class="cs-n">04</span>
+      <h2 class="cs-h2" data-reveal>De la persona a la pantalla.</h2>
+      <div data-rise><h3>Mapa de empatía</h3><p>Resumí qué dicen, piensan, hacen y sienten los usuarios: ansiedad, frustración e inseguridad, y el deseo de autonomía y confianza.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>Mapa de empatía</figcaption><img src="auralis-empatia.jpg" alt="Mapa de empatía de Auralis" loading="lazy" width="1020" height="590"></figure>
+    <section class="cs-sec cs-text" aria-label="User persona">
+      <span class="cs-n"></span>
+      <h2 class="cs-h2" data-reveal></h2>
+      <div data-rise><h3>User persona · Jorge Hernández</h3><p>34 años, arquitecto, Medellín. Usa baterías desechables porque le dan seguridad, pero a veces marca 50 % y se apaga de golpe. Necesita control preciso de la batería, alertas claras y anticipadas, y un recordatorio para llevar repuestos.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>User persona</figcaption><img src="auralis-persona.jpg" alt="User persona: Jorge Hernández" loading="lazy" width="1010" height="638"></figure>
+    <section class="cs-sec cs-text" aria-label="Arquitectura">
+      <span class="cs-n"></span>
+      <h2 class="cs-h2" data-reveal></h2>
+      <div data-rise><h3>Arquitectura de información</h3><p>Cuatro áreas desde el home: Dirección, Home, Ecualizador y Menú. El nivel de batería está presente en las pantallas de control para que nunca se pierda de vista.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>Arquitectura de información</figcaption><img src="auralis-arquitectura.jpg" alt="Arquitectura de información de la app" loading="lazy" width="1632" height="677"></figure>
+    <section class="cs-sec cs-text" aria-label="Journey map">
+      <span class="cs-n"></span>
+      <h2 class="cs-h2" data-reveal></h2>
+      <div data-rise><h3>Journey map</h3><p>Seis fases, del descubrimiento al soporte: descubrimiento, primer uso, ajustes de sonido, personalización, uso diario y soporte. En cada una, el punto de dolor se volvió una oportunidad de diseño.</p></div>
+    </section>
+    <figure class="cs-fig cs-fig--pad" data-img><figcaption>Journey map</figcaption><img src="auralis-journey.jpg" alt="Journey map del usuario" loading="lazy" width="1727" height="697"></figure>
+    <section class="cs-sec cs-text" aria-label="Solución">
+      <span class="cs-n">05</span>
+      <h2 class="cs-h2" data-reveal>Información clara. Control sencillo.</h2>
+      <div data-rise><p>Una interfaz oscura y sin ruido que pone el estado de cada audífono en el centro.</p><h3>Batería a la vista</h3><p>Porcentaje del audífono izquierdo y derecho en la pantalla principal, con color según el nivel.</p><h3>Controles amplios</h3><p>Volumen y dirección del sonido con botones grandes y fáciles de tocar.</p><h3>Ecualizador visual</h3><p>Anillos concéntricos para graves, medios y agudos en lugar de deslizadores pequeños.</p></div>
+    </section>
+    <figure class="cs-fig " data-img><figcaption>Sistema de diseño</figcaption><div class="cs-sw"><div><i style="background:#1e242b"></i>#1E242B<br>Fondo</div><div><i style="background:#272424"></i>#272424<br>Superficie</div><div><i style="background:#879cad"></i>#879CAD<br>Acento</div><div><i style="background:#d3d6da"></i>#D3D6DA<br>Controles</div><div><i style="background:#fff"></i>#FFFFFF<br>Texto</div></div><img src="auralis-sistema.jpg" alt="Componentes del sistema de diseño" loading="lazy" width="1601" height="477"></figure>
+    <section class="cs-sec cs-text" aria-label="Pruebas">
+      <span class="cs-n">06</span>
+      <h2 class="cs-h2" data-reveal>Probar con personas antes de entregar.</h2>
+      <div data-rise><h3>Conectar</h3><p>Que el usuario conecte el dispositivo de manera satisfactoria, sin ayuda.</p><h3>Ajustar el volumen</h3><p>Que lo suba o lo baje rápidamente desde la primera pantalla.</p><h3>Cambiar el idioma</h3><p>Que encuentre y confirme el cambio de idioma del sistema.</p></div>
+    </section>
+    <section class="cs-cta" data-rise>
+      <h2>¿Quieres ver el proceso completo?</h2>
+      <p>Wireframes, pantallas en alta fidelidad, sistema de diseño y guion de pruebas, todo en un solo archivo.</p>
+      <a class="cs-pill" href="https://www.figma.com/design/edrnlkXRbGsrxStOp3vy6e/Final-Ui-Ux" target="_blank" rel="noopener">Abrir el tablero en Figma ↗</a>
+    </section>
+    <p class="cs-next"><a href="index.html#trabajo">Volver a todos los proyectos →</a></p>
+  </div>
 </main>
 
 <footer class="foot" data-hud="light">

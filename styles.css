@@ -679,3 +679,20 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .slide__spread{width:86%;height:auto;display:block;border-radius:10px;box-shadow:0 18px 40px rgba(40,30,15,.35)}
 .vis__spread{display:grid;place-items:center;width:100%}
 .vis__spread img{width:min(78%,640px);height:auto;border-radius:12px;box-shadow:0 24px 60px rgba(40,30,15,.35)}
+
+/* Portafolios en el inicio: tarjeta tipográfica violeta */
+.stage--portafolios{display:grid;place-items:center;background:#15121f;color:#ebe7f6;text-align:center;padding:0 8%}
+.stage--portafolios .ph__big{color:#ebe7f6}
+.vis--portafolios{background:#15121f;color:#ebe7f6}
+.vis__big{font-family:var(--serif);font-style:italic;font-size:clamp(40px,5vw,84px);line-height:.98;text-align:center;margin:0}
+
+/* Inicio: pasteles opacos tirando a blanco, uno por proyecto */
+.stage--aureo{background:#e7edf7}
+.stage--memoria{background:#e8eee1;color:#24352a}
+.stage--portafolios{background:#ece8f6;color:#2c2647}
+.stage--portafolios .ph__big{color:#2c2647}
+.vis--aureo{background:#e7edf7;color:#1f2a44}
+.vis--memoria{background:#e8eee1;color:#24352a}
+.vis--portafolios{background:#ece8f6;color:#2c2647}
+.vis__phone img{box-shadow:0 22px 50px rgba(31,42,68,.22)}
+.slide__spread,.vis__spread img{box-shadow:0 18px 44px rgba(36,53,42,.22)}
