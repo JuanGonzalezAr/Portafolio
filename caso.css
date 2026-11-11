@@ -112,4 +112,41 @@ body.cx .foot{background:var(--fig)}
 .cs-scroll--wide img{height:auto;width:min(720px,78vw);border-radius:14px;background:#fff}
 .cs-scroll--wide figure{flex:0 0 auto}
 
-body.cx--sim{--bg:#f1f8f5;--fig:#e3f0ea;--tint:#dcefe6;--ink:#1d3a32;--mute:#52706a;--acc:#3f8f7a;--btn:#2f7d69;--line:rgba(29,58,50,.13)}
+body.cx--sim{--bg:#f0f6f7;--fig:#e1eef0;--tint:#d9ebee;--ink:#1b3a5c;--mute:#4f6b80;--acc:#2f7f93;--btn:#24698a;--line:rgba(27,58,92,.13)}
+
+/* ---------- Variante A · "split": título fijo a la izquierda, contenido a la derecha (Memoria Viva) ---------- */
+body.cx--split .cs-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:clamp(24px,4vw,64px);align-items:end}
+body.cx--split .cs-hero .cs-tag{grid-column:1/-1}
+body.cx--split .cs-hero .cs-lead{margin:0 0 .6em;max-width:26em}
+body.cx--split .cs-text{width:100%;margin-left:0}
+body.cx--split .cs-sec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);column-gap:clamp(24px,4vw,64px);align-items:start}
+body.cx--split .cs-sec>.cs-n{grid-column:1;grid-row:1;margin:0 0 .8em}
+body.cx--split .cs-sec>.cs-h2{grid-column:1;grid-row:2;position:sticky;top:110px;margin:0;font-size:clamp(24px,2.6vw,38px)}
+body.cx--split .cs-sec>div{grid-column:2;grid-row:1/span 2}
+body.cx--split .cs-sec>div>h3:first-child,body.cx--split .cs-sec>div>.cs-list:first-child{margin-top:0}
+body.cx--split .cs-fig,body.cx--split .cs-pull{width:calc(68% - 4px);margin-left:auto}
+body.cx--split .cs-sec>.cs-n:empty{display:none}
+
+/* ---------- Variante B · "zig": secciones y láminas alternan lado (AntidoTek) ---------- */
+body.cx--zig .cs-hero--logo{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(24px,4vw,64px);align-items:center}
+body.cx--zig .cs-logo{margin:0;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(16px,2.4vw,34px);display:grid;place-items:center}
+body.cx--zig .cs-logo img{width:100%;height:auto;mix-blend-mode:multiply;border-radius:0}
+body.cx--zig .cs-h1{font-size:clamp(40px,5.2vw,78px)}
+body.cx--zig .cs-meta{grid-template-columns:minmax(0,1fr) minmax(0,1.9fr)}
+body.cx--zig .cs-stat{order:-1}
+body.cx--zig .cs-sec{width:min(640px,64%);margin-left:0}
+body.cx--zig .cs-sec.cs-r{margin-left:auto;margin-right:0}
+body.cx--zig .cs-sec.cs-r>.cs-n,body.cx--zig .cs-sec.cs-r>.cs-h2{text-align:right}
+body.cx--zig .cs-fig{width:84%}
+body.cx--zig .cs-fig--l{margin-right:auto}
+body.cx--zig .cs-fig--r{margin-left:auto}
+body.cx--zig .cs-pull{width:84%;margin-left:auto}
+@media (max-width:820px){
+  body.cx--split .cs-hero,body.cx--zig .cs-hero--logo{grid-template-columns:1fr}
+  body.cx--split .cs-sec{display:block}
+  body.cx--split .cs-sec>.cs-h2{position:static;margin:0 0 .6em}
+  body.cx--split .cs-fig,body.cx--split .cs-pull,body.cx--zig .cs-fig,body.cx--zig .cs-pull{width:100%}
+  body.cx--zig .cs-meta{grid-template-columns:1fr}
+  body.cx--zig .cs-sec,body.cx--zig .cs-sec.cs-r{width:100%;margin-left:0}
+  body.cx--zig .cs-sec.cs-r>.cs-n,body.cx--zig .cs-sec.cs-r>.cs-h2{text-align:left}
+}

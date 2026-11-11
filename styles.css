@@ -711,3 +711,8 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .stage--sim{display:grid;place-items:center;text-align:center;padding:0 8%}
 .stage--sim .ph__big{color:#1d3a32}
 .vis__big{color:inherit}
+
+/* AntidoTek en el inicio: logo sobre aguamarina */
+.stage--sim,.vis--sim{background:#dcecef;color:#1b3a5c}
+.stage--sim img{width:min(78%,420px);height:auto;mix-blend-mode:multiply}
+.vis--sim .vis__logo{width:min(70%,460px);height:auto;mix-blend-mode:multiply}
