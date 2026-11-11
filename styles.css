@@ -698,3 +698,10 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .slide__spread,.vis__spread img{box-shadow:0 18px 44px rgba(36,53,42,.22)}
 .stage--portafolios .slide__phone{box-shadow:none;border-radius:0;filter:drop-shadow(0 16px 26px rgba(44,38,71,.25))}
 .vis--portafolios .vis__phone img{box-shadow:none;border-radius:0;filter:drop-shadow(0 20px 34px rgba(44,38,71,.28))}
+
+/* Un color por proyecto: azul acero · verde salvia · durazno */
+.stage--aureo,.vis--aureo{background:#e1eaf3;color:#1d2b3a}
+.stage--portafolios,.vis--portafolios{background:#f6e3d3;color:#44291d}
+.stage--portafolios .ph__big{color:#44291d}
+.stage--portafolios .slide__phone{filter:drop-shadow(0 16px 26px rgba(68,41,29,.28))}
+.vis--portafolios .vis__phone img{filter:drop-shadow(0 20px 34px rgba(68,41,29,.3))}

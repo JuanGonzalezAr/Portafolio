@@ -5,14 +5,14 @@
    Pasteles opacos tirando a blanco; cada caso con su matiz.
    ========================================================== */
 body.cx{
-  --bg:#f5f6fa;--fig:#eceff5;--card:#fff;--tint:#e8eef8;
-  --ink:#1f2a44;--mute:#5b6781;--acc:#6683b6;--btn:#4d6aa0;--line:rgba(31,42,68,.12);
+  --bg:#f3f6f9;--fig:#e8eef4;--card:#fff;--tint:#e0eaf3;
+  --ink:#1d2b3a;--mute:#566679;--acc:#5b7d9d;--btn:#46647f;--line:rgba(29,43,58,.12);
   --paper:var(--bg);--red:var(--ink);--red-deep:var(--ink);
   background:var(--bg);color:var(--ink);font-family:var(--sans);
 }
 body.cx--auralis{}
 body.cx--memoria{--bg:#f5f6f0;--fig:#eaeee3;--tint:#e6eddf;--ink:#24352a;--mute:#5d6d60;--acc:#6f8c62;--btn:#4f7a58;--line:rgba(36,53,42,.12)}
-body.cx--port{--bg:#f6f4fa;--fig:#eeebf6;--tint:#eae6f5;--ink:#2c2647;--mute:#645e7f;--acc:#7a6cb5;--btn:#6556a8;--line:rgba(44,38,71,.12)}
+body.cx--port{--bg:#fbf4ee;--fig:#f5e9de;--tint:#f6e3d3;--ink:#44291d;--mute:#7a5f50;--acc:#c0703f;--btn:#b25f2f;--line:rgba(68,41,29,.13)}
 
 .cs-wrap{width:min(1040px,calc(100% - var(--pad)*4));margin-inline:auto}
 .cs-text{width:min(780px,86%);margin-left:clamp(0px,9%,96px)}
