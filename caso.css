@@ -111,3 +111,5 @@ body.cx .foot{background:var(--fig)}
 
 .cs-scroll--wide img{height:auto;width:min(720px,78vw);border-radius:14px;background:#fff}
 .cs-scroll--wide figure{flex:0 0 auto}
+
+body.cx--sim{--bg:#f1f8f5;--fig:#e3f0ea;--tint:#dcefe6;--ink:#1d3a32;--mute:#52706a;--acc:#3f8f7a;--btn:#2f7d69;--line:rgba(29,58,50,.13)}

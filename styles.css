@@ -705,3 +705,9 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .stage--portafolios .ph__big{color:#44291d}
 .stage--portafolios .slide__phone{filter:drop-shadow(0 16px 26px rgba(68,41,29,.28))}
 .vis--portafolios .vis__phone img{filter:drop-shadow(0 20px 34px rgba(68,41,29,.3))}
+
+/* SimClin: verde menta clínico */
+.stage--sim,.vis--sim{background:#dcefe6;color:#1d3a32}
+.stage--sim{display:grid;place-items:center;text-align:center;padding:0 8%}
+.stage--sim .ph__big{color:#1d3a32}
+.vis__big{color:inherit}

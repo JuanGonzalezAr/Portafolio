@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SimClin — Caso de estudio · Sebastián González</title>
+<meta name="description" content="Caso de estudio: SimClin, un simulador clínico web con una cara en 3D que responde en vivo para entrenar el reconocimiento de intoxicaciones.">
+<meta name="theme-color" content="#f1f8f5">
+<meta property="og:title" content="SimClin — Caso de estudio">
+<meta property="og:description" content="Caso de estudio: SimClin, un simulador clínico web con una cara en 3D que responde en vivo para entrenar el reconocimiento de intoxicaciones.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Fira+Code:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Vazirmatn:wght@300..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="caso.css?v=5">
+</head>
+<body class="cx cx--sim">
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ENCABEZADO FIJO: el logotipo gigante se encoge hasta la barra al hacer scroll -->
+
+<header class="top top--page" id="top">
+  <a class="wm wm--hero" href="index.html" aria-label="Sebastián, inicio">
+    <span class="wm__word" aria-hidden="true">
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:72 1 0"><span><svg class="g" viewBox="0 0 72 100" focusable="false"><g><rect width="24" height="100"/><rect x="27" width="45" height="24"/><rect x="27" y="38" width="37" height="24"/><rect x="27" y="76" width="45" height="24"/></g></svg></span></span>
+      <span class="wm__l" style="flex:82 1 0"><span><svg class="g" viewBox="0 0 82 100" focusable="false"><g><rect width="24" height="100"/><path class="s" d="M27 12H50A19 19 0 0 1 50 50H27"/><path class="s" d="M27 50H50A19 19 0 0 1 50 88H27"/></g></svg></span></span>
+      <span class="wm__l" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span></span>
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:76 1 0"><span><svg class="g" viewBox="0 0 76 100" focusable="false"><g><rect width="36" height="24"/><rect x="39" width="37" height="24"/><rect x="26" y="27" width="24" height="73"/></g></svg></span></span>
+      <span class="wm__l" style="flex:24 1 0"><span><svg class="g" viewBox="0 0 24 100" focusable="false"><g><rect width="24" height="47"/><rect y="50" width="24" height="50"/></g></svg></span></span>
+      <span class="wm__l wm__l--acc" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span><svg class="wm__shape" viewBox="-1 -1 2 2" focusable="false"><polygon points="0,-0.94 0.81,0.47 -0.81,0.47"/></svg></span>
+      <span class="wm__l" style="flex:96 1 0"><span><svg class="g" viewBox="0 0 96 100" focusable="false"><g><rect width="20" height="100"/><rect x="76" width="20" height="100"/><path d="M23 0H47L73 100H49Z"/></g></svg></span></span>
+    </span>
+  </a>
+  <div class="bar">
+    <p class="bar__tag">Diseño UX/UI &amp; Producto</p>
+    <nav class="bar__nav" aria-label="Principal">
+      <a href="index.html#proceso">Proceso</a>
+      <a href="index.html#trabajo">Proyectos</a>
+      <a href="index.html#colaborar">Colaborar</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a class="bar__mail" href="mailto:juansgonsaleza@gmail.com">juansgonsaleza@gmail.com</a>
+  </div>
+</header>
+
+
+<main id="main">
+  <div class="cs-wrap">
+    <div class="cs-bar cs-top" data-intro><b>SimClin</b><a class="cs-pill" href="mailto:juansgonsaleza@gmail.com">Escríbeme ↗</a></div>
+    <header class="cs-hero">
+      <p class="cs-tag" data-intro>Caso 04 · Simulación clínica · Taller 7</p>
+      <h1 class="cs-h1" data-intro>Ponerle cara al maniquí.</h1>
+      <p class="cs-lead" data-intro>SimClin le pone cara al maniquí del laboratorio de simulación para que el estudiante de toxicología aprenda a reconocer un envenenamiento mirando al paciente, en lugar de que se lo cuenten.</p>
+    </header>
+    <div class="cs-meta" data-intro>
+      <dl class="cs-card">
+        <div><dt>Rol</dt><dd>Líder de proyecto · enfoque de product manager</dd></div>
+        <div><dt>Producto</dt><dd>Simulador clínico web con cara en 3D</dd></div>
+        <div><dt>Contexto</dt><dd>Taller 7 · Universidad Pontificia Bolivariana, Medellín</dd></div>
+        <div><dt>Duración</dt><dd>8 semanas</dd></div>
+      </dl>
+      <div class="cs-stat"><b>0</b><span>de costo de adopción: corre en el computador y el televisor que la sala ya tiene</span></div>
+    </div>
+    <section class="cs-sec cs-text" aria-label="El reto">
+      <span class="cs-n">01</span>
+      <h2 class="cs-h2" data-reveal>El maniquí tiene pulso, pero su cara no cambia.</h2>
+      <div data-rise><p>Cuatro de los signos con los que se diagnostica una intoxicación están en la cara: las pupilas, el color y la temperatura de la piel, la diaforesis y la cianosis. El maniquí del laboratorio tiene pulso, respiración y un monitor con seis parámetros, pero su cara es una pieza de plástico que no cambia.</p><h3>Se lo tienen que imaginar</h3><p>Hoy el estudiante no ve los signos que más pesan en el diagnóstico: el profesor se los dice en voz alta. Lo que no entrena es el gesto clínico real, que es mirar al paciente y decidir.</p><h3>No se resuelve comprando equipo</h3><p>Los maniquíes de gama alta cuestan decenas de miles de dólares y, aun así, no cambian de toxidrome en vivo durante la práctica.</p></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Investigación">
+      <span class="cs-n">02</span>
+      <h2 class="cs-h2" data-reveal>El producto salió de una tabla.</h2>
+      <div data-rise><p>Los médicos de cuidados intensivos nos entregaron la tabla de toxidromes con la que trabajan, con seis columnas de signos. Los seis cuadros clínicos que trae SimClin salen de ahí, no los inventamos: paciente normal, anticolinérgico, colinérgico, opioide, simpaticomimético y sedante/hipnótico.</p><h3>Lo que una cara puede mostrar</h3><p>De las seis columnas, una cara en 3D solo puede mostrar tres: pupilas, temperatura como color de piel y diaforesis. Frecuencia cardíaca y tensión, respiración y ruidos intestinales no se ven.</p><h3>Dos signos añadidos</h3><p>La cianosis, cara visible de la depresión respiratoria, y el estado de conciencia, el signo más visible de todos. Los dos están documentados como añadidos nuestros.</p><h3>Supuestos antes de construir</h3><p>Escribimos catorce supuestos de diseño y, junto a cada uno, qué resultado nos haría darlo por falso. Después probamos el prototipo con nueve estudiantes.</p></div>
+    </section>
+    <section class="cs-pull" data-rise>
+      <span class="cs-n">03 · La decisión</span>
+      <blockquote>“Un producto que declare qué no puede hacer.”</blockquote>
+      <p>Lo que la cara no puede mostrar no se simula: queda escrito en el panel del profesor para que lo diga él. Preferimos eso antes que fingir datos clínicos.</p>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Solución">
+      <span class="cs-n">04</span>
+      <h2 class="cs-h2" data-reveal>Un televisor junto a la camilla, el control en manos del estudiante.</h2>
+      <div data-rise><p>SimClin pone una cara en 3D que responde en vivo. No reemplaza al maniquí, lo acompaña: el maniquí sigue aportando el cuerpo, el pulso y el monitor, y SimClin aporta lo único que le falta, la cara.</p><h3>Quién tiene el control</h3><p>La decisión que define el producto: lo tiene el estudiante, desde su celular. Si el profesor le abre la boca al paciente, le da la respuesta; si lo hace el estudiante, está explorando.</p><h3>El rol del profesor</h3><p>Arma el cuadro clínico que quiere trabajar ese día y observa qué exploró el estudiante.</p></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Producto">
+      <span class="cs-n">05</span>
+      <h2 class="cs-h2" data-reveal>Tres pantallas sobre un único estado del paciente.</h2>
+      <div data-rise><ol class="cs-list"><li><span>01</span><div><h3>Televisor del salón</h3><p>Dibuja la cara en 3D dentro del navegador. Los signos son un shader pintado sobre la malla, no un video, así que cuando el profesor mueve un control la cara cambia al instante. Ahí va también el monitor, con ECG, alarma y ruidos abdominales.</p><em>Sala</em></div></li><li><span>02</span><div><h3>Celular del estudiante</h3><p>Entra escaneando un QR, sin instalar nada. Elige dónde mirar y qué maniobra hacer: abrir la boca, sacar la lengua o auscultar el abdomen.</p><em>Estudiante</em></div></li><li><span>03</span><div><h3>Panel del profesor</h3><p>Cabe en una sola pantalla sin scroll, con los seis toxidromes a un clic y deslizadores para los cinco signos. Muestra lo que el estudiante está mirando y permite descargar el registro de la sesión.</p><em>Profesor</em></div></li></ol><h3>Todo vive en la red del salón</h3><p>Un servidor local en el computador de la sala, en Python, con un gemelo en Node por si no hay Python. No hace falta internet, ni siquiera la librería 3D, que va dentro del propio archivo.</p></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Signos">
+      <span class="cs-n"></span>
+      <h2 class="cs-h2" data-reveal></h2>
+      <div data-rise><h3>Los cinco signos y sus escalas</h3><ol class="cs-list"><li><span>01</span><div><h3>Pupilas</h3><p>De 0,8 a 9,0 mm, dibujadas sobre el iris en los dos ojos en 3D.</p><em>Ojos</em></div></li><li><span>02</span><div><h3>Piel y temperatura</h3><p>De fría y pálida a caliente y rubicunda, en toda la cara.</p><em>Piel</em></div></li><li><span>03</span><div><h3>Diaforesis</h3><p>De 0 a 100 %, como brillo y gotas en la cara.</p><em>Cara</em></div></li><li><span>04</span><div><h3>Cianosis</h3><p>De 0 a 100 %, en los labios y en la lengua al abrir la boca.</p><em>Labios</em></div></li><li><span>05</span><div><h3>Estado de conciencia</h3><p>De alerta a estuporoso, en párpados, mirada y boca.</p><em>Conciencia</em></div></li></ol></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Lo que quitamos">
+      <span class="cs-n">06</span>
+      <h2 class="cs-h2" data-reveal>Lo que más cambió el producto fue lo que le quitamos.</h2>
+      <div data-rise><p>Seis decisiones cuentan esa historia. El hilo que las une: cada cambio le quitó poder al profesor o al sistema y se lo dio al estudiante, o eliminó algo que fingía ser información.</p><ol class="cs-list"><li><span>01</span><div><h3>El estudiante abre la boca, no el profesor</h3><p>Antes lo hacía el profesor. Si explora él, le está dando la respuesta.</p><em>Control</em></div></li><li><span>02</span><div><h3>Botón en vez de deslizador</h3><p>Las maniobras eran graduales y pasaron a abierto o cerrado. Explorar no es dosificar un hallazgo.</p><em>Maniobras</em></div></li><li><span>03</span><div><h3>Controles sueltos en vez de casos precargados</h3><p>El profesor arma el cuadro que necesita para su clase sobre la tabla de toxidromes.</p><em>Casos</em></div></li><li><span>04</span><div><h3>Vitales ocultos hasta tener el dato real</h3><p>Un número inventado al lado de un paciente estorba más de lo que enseña.</p><em>Vitales</em></div></li><li><span>05</span><div><h3>Solo cabeza y cuello</h3><p>Era lo único que el modelo muestra de verdad, así que se quitó la vista del cuerpo entero.</p><em>Vista</em></div></li><li><span>06</span><div><h3>Un panel sin scroll</h3><p>Pasó de 2000 px con scroll a una sola pantalla. En clase, o el control está a la vista o no existe.</p><em>Panel</em></div></li></ol></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Resultados">
+      <span class="cs-n">07</span>
+      <h2 class="cs-h2" data-reveal>Probado con estudiantes y validado en el laboratorio.</h2>
+      <div data-rise><h3>Supuestos confirmados</h3><p>De los supuestos puestos a prueba, cinco quedaron confirmados: la cara se lee como hallazgos del paciente y no como otro monitor, un solo celular alcanza, la cianosis se lee como signo clínico, las subvistas se descubren solas y el televisor se lee bien desde donde se para el grupo.</p><h3>El que no se cumplió</h3><p>Supusimos que una sola persona manejaría el celular mientras examinaba al paciente. El grupo se reparte los roles y otro estudiante maneja el control. No rompió nada: explica por qué un solo control no deja a nadie por fuera.</p><h3>Validación institucional</h3><p>El 28 de octubre el coordinador de los simuladores de Medicina lo usó él mismo, sin que se lo contáramos. Pidió un resumen corto del caso en pantalla, se comprometió a gestionar la reunión con el ingeniero del simulador para destrabar el SDK y nos invitó a presentarlo en una conferencia en Perú.</p><h3>El MVP está construido</h3><p>Cara en 3D con los cuatro signos faciales y el de conciencia, control del estudiante en celular y tablet, panel del profesor con los seis toxidromes, sonido del monitor, ruidos abdominales y registro descargable de cada sesión. Ya está montado en el laboratorio, al lado del maniquí.</p></div>
+    </section>
+    <figure class="cs-fig " data-img><figcaption>Cuatro frentes de trabajo</figcaption><div class="cs-team"><div><b>Desarrollo del producto</b><span>Servidor, tres pantallas, visor 3D e integración del modelo</span></div><div><b>Diseño 3D</b><span>La cara en Blender con MB-Lab</span></div><div><b>Fuente clínica</b><span>Médicos de cuidados intensivos y un toxicólogo por confirmar valores</span></div><div><b>Validación institucional</b><span>Coordinador de los simuladores de Medicina, dueño de los equipos</span></div></div></figure>
+    <section class="cs-sec cs-text" aria-label="Mi rol">
+      <span class="cs-n">08</span>
+      <h2 class="cs-h2" data-reveal>Liderar sin perder de vista al estudiante.</h2>
+      <div data-rise><p>Fui líder del proyecto, con funciones cercanas a las de un product manager.</p><h3>Detectar el problema</h3><p>Ayudé en la investigación para encontrar qué le faltaba a los simuladores actuales.</p><h3>Idear la solución y el producto</h3><p>Participé en definir la solución y el producto que íbamos a mostrar.</p><h3>Liderar el proyecto</h3><p>Asumí las funciones de líder: ordenar prioridades, decisiones y entregas del equipo.</p></div>
+    </section>
+    <section class="cs-sec cs-text" aria-label="Lo que sigue">
+      <span class="cs-n">09</span>
+      <h2 class="cs-h2" data-reveal>Hacia la entrega final.</h2>
+      <div data-rise><p>El proyecto va en la semana 7 de 8: cierra el MVP, no lo propone.</p><h3>Signos vitales reales</h3><p>Conectar el SDK del simulador y encenderlos, lo único que falta para probar el supuesto pendiente.</p><h3>Valores confirmados</h3><p>Confirmar con el toxicólogo los valores numéricos de cada toxidrome.</p><h3>Resumen del caso en pantalla</h3><p>Montarlo, como lo pidió el coordinador.</p><h3>Modelo 3D final</h3><p>Recibir la versión final del diseñador, con las texturas resueltas.</p></div>
+    </section>
+    <section class="cs-cta" data-rise>
+      <h2>¿Te cuento cómo lo hicimos?</h2>
+      <p>Si te interesa el proceso detrás de SimClin, escríbeme y lo conversamos.</p>
+      <a class="cs-pill" href="mailto:juansgonsaleza@gmail.com">Escríbeme ↗</a>
+    </section>
+    <p class="cs-next"><a href="index.html#trabajo">Volver a todos los proyectos →</a></p>
+  </div>
+</main>
+
+<footer class="foot" data-hud="light">
+  <div class="foot__grid">
+    <a class="foot__mail" href="mailto:juansgonsaleza@gmail.com">juansgonsaleza@gmail.com</a>
+    <p class="foot__time mono"><span>Hora local</span><br><b data-clock>--:--:--</b></p>
+    <ul class="foot__links">
+      <li><a href="https://www.linkedin.com/in/juan-sebastian-gonzalez-81a608424/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/JuanGonzalezAr" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="mailto:juansgonsaleza@gmail.com">Correo</a></li>
+    </ul>
+    <ul class="foot__links">
+      <li><a href="index.html#proceso">Proceso</a></li>
+      <li><a href="index.html#trabajo">Proyectos</a></li>
+      <li><a href="index.html#colaborar">Colaborar</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="wm wm--foot" aria-hidden="true">
+    <span class="wm__word">
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:72 1 0"><span><svg class="g" viewBox="0 0 72 100" focusable="false"><g><rect width="24" height="100"/><rect x="27" width="45" height="24"/><rect x="27" y="38" width="37" height="24"/><rect x="27" y="76" width="45" height="24"/></g></svg></span></span>
+      <span class="wm__l" style="flex:82 1 0"><span><svg class="g" viewBox="0 0 82 100" focusable="false"><g><rect width="24" height="100"/><path class="s" d="M27 12H50A19 19 0 0 1 50 50H27"/><path class="s" d="M27 50H50A19 19 0 0 1 50 88H27"/></g></svg></span></span>
+      <span class="wm__l" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span></span>
+      <span class="wm__l" style="flex:80 1 0"><span><svg class="g" viewBox="0 0 80 100" focusable="false"><g><path class="s" d="M78 12H36A19 19 0 0 0 36 50H40"/><path class="s" d="M42 50H46A19 19 0 0 1 46 88H2"/></g></svg></span></span>
+      <span class="wm__l" style="flex:76 1 0"><span><svg class="g" viewBox="0 0 76 100" focusable="false"><g><rect width="36" height="24"/><rect x="39" width="37" height="24"/><rect x="26" y="27" width="24" height="73"/></g></svg></span></span>
+      <span class="wm__l" style="flex:24 1 0"><span><svg class="g" viewBox="0 0 24 100" focusable="false"><g><rect width="24" height="47"/><rect y="50" width="24" height="50"/></g></svg></span></span>
+      <span class="wm__l wm__l--acc" style="flex:84 1 0"><span><svg class="g" viewBox="0 0 84 100" focusable="false"><g><path d="M0 100L30 0H54L84 100H58L42 34L26 100Z"/><rect x="27" y="62" width="30" height="18"/></g></svg></span><svg class="wm__shape" viewBox="-1 -1 2 2" focusable="false"><polygon points="0,-0.94 0.81,0.47 -0.81,0.47"/></svg></span>
+      <span class="wm__l" style="flex:96 1 0"><span><svg class="g" viewBox="0 0 96 100" focusable="false"><g><rect width="20" height="100"/><rect x="76" width="20" height="100"/><path d="M23 0H47L73 100H49Z"/></g></svg></span></span>
+    </span>
+  </div>
+  <p class="foot__legal mono">© 2026 Juan Sebastián González · Medellín, Colombia</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script src="case.js?v=2"></script>
+</body>
+</html>
