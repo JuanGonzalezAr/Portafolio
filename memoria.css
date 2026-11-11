@@ -166,3 +166,9 @@ body.case .chero__title{font-size:clamp(64px,11.5vw,220px);line-height:.9}
 .kc__team li{padding-bottom:1.4em}
 .kc__team h3{font-size:clamp(20px,1.9vw,30px)}
 @media (max-width:899px){.kc__team{grid-template-columns:1fr}}
+
+.cspread{margin:0;padding:0 var(--pad)}
+.cspread img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.kc>.shots{grid-column:1/-1}
+.shots--wide .shot img{height:min(420px,54vh);width:auto;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.shots--wide .shot figcaption{color:#b5c7a4}

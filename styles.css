@@ -673,3 +673,9 @@ body.case .ckick,body.case .cmeta div,body.case .kc__two,body.case .kc__three,bo
 .kc__cta:hover{background:#d3deef;color:#101a2d;border-color:#d3deef}
 .kc__cta:hover i{transform:translate(3px,-3px)}
 .kc__cta:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+
+/* Memoria Viva en el inicio: portada del libro */
+.stage--memoria{display:grid;place-items:center}
+.slide__spread{width:86%;height:auto;display:block;border-radius:10px;box-shadow:0 18px 40px rgba(40,30,15,.35)}
+.vis__spread{display:grid;place-items:center;width:100%}
+.vis__spread img{width:min(78%,640px);height:auto;border-radius:12px;box-shadow:0 24px 60px rgba(40,30,15,.35)}
